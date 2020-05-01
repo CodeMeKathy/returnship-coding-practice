@@ -3,24 +3,30 @@
 
 // Use your imagination to add features to this basic game. Can add GUI or can make it playing online by passing to the server.
 
-// Create a function to generate a random number
-
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * Math.floor(max))
-}
-
-console.log(getRandomNumber(10))
-
 // Create a variable and assign it to the user input
-let userGuessInput = prompt('Please guess a random number')
-let userGuessNumber = parseFloat(userGuessInput)
-console.log(userGuessInput)
-console.log(userGuessNumber)
-
-if (userGuessNumber === getRandomNumber(10)) {
-  console.log('Match')
-  alert('Its a match')
-} else {
-  console.log('Nooooo it is NOT a match')
-  alert('Nooooo it is NOT a match')
+let max = 10
+// Create a function to generate a random number
+function getRandomNumber(max) {
+  randomNumber = Math.floor(Math.random() * Math.floor(max))
+  return randomNumber
 }
+console.log('randomNumber', getRandomNumber(max))
+
+let userGuessInput = prompt('Please guess a random number')
+console.log('userGuessInput', userGuessInput)
+let userNumber = parseFloat(userGuessInput)
+console.log('userNumber', userNumber)
+
+// Compare user input to random number and alert user
+function compareUserGuess(userNumber, randomNumber) {
+  console.log(userNumber)
+  console.log(randomNumber)
+  if (userNumber === randomNumber) {
+    console.log('Match')
+    alert('Its a match')
+  } else {
+    console.log('Nooooo it is NOT a match')
+    alert('Nooooo it is NOT a match')
+  }
+}
+compareUserGuess()
