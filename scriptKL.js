@@ -4,7 +4,7 @@
 // Use your imagination to add features to this basic game. Can add GUI or can make it playing online by passing to the server.
 
 // Declared and Initialized variables
-let inputElement = document.querySelector('.input')
+// let userGuess =
 let counter = 0
 let maxGuesses = 5
 let maxNumberRange = 10
@@ -14,32 +14,30 @@ function getRandomNumber(maxNumberRange) {
   randomNumber = Math.floor(Math.random() * Math.floor(maxNumberRange))
   return randomNumber
 }
-console.log('randomNumber =', getRandomNumber(maxNumberRange))
+console.log(' randomNumber =', getRandomNumber(maxNumberRange))
+console.log(counter)
 
-// Compare user input to random number and alert user
-function compareUserGuess() {
-  counter++
+function onClickCompareNumbers() {
   // Create a variable and assign it to the user input
-  let userGuessInput = inputElement
+  let userGuessInput = document.getElementById('input').value
   console.log('userGuessInput =', userGuessInput)
+  console.log('userGuessInput =', typeof userGuessInput)
   let userNumber = Number(userGuessInput)
   console.log('randomNumber =', randomNumber)
   console.log('userNumber =', userNumber)
+  counter++
+  console.log(counter)
   if (counter < 6 && userNumber !== randomNumber) {
     console.log('counter count: ', counter)
     // console.log('Nooooo it is NOT a match')
-    // alert('Nooooo it is NOT a match')
-    counter += 1
+    alert('Nooooo it is NOT a match')
+    // counter += 1
   }
   if (userNumber === randomNumber) {
     console.log('Match')
-    alert('Its a match')
-  } else if (counter === 6) {
+    alert('Its a match. Game Over!')
+  } else if (counter === 5) {
     console.log('No more guesses!')
     alert('No more guesses!')
   }
-  counter++
-  console.log('counter count: ', counter)
-  // return false
 }
-compareUserGuess()
