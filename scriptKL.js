@@ -30,14 +30,21 @@ function onClickCompareNumbers() {
   if (counter < 6 && userNumber !== randomNumber) {
     console.log('counter count: ', counter)
     // console.log('Nooooo it is NOT a match')
-    alert('Nooooo it is NOT a match')
+    document.getElementById('guessOutcome').innerHTML =
+      'Nooooo it is NOT a match'
+    // alert('Nooooo it is NOT a match')
     // counter += 1
   }
   if (userNumber === randomNumber) {
     console.log('Match')
-    alert('Its a match. Game Over!')
+    // alert('Its a match. Game Over!')
+    document.getElementById('guessOutcome').innerHTML =
+      'Its a match. Game Over!'
+    ;('Its a match. Game Over!')
   } else if (counter === 5) {
     console.log('No more guesses!')
-    alert('No more guesses!')
+    // alert('No more guesses!')
+    document.getElementById('guessOutcome').innerHTML =
+      'Game Over. No more guesses!'
   }
 }
