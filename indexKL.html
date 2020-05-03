@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Guessing Game</title>
   </head>
   <body>
-    <h1>Guessing Game</h1>
+    <section class="masthead" role="img" aria-label="Image Description">
+      <h1>Guessing Game</h1>
+
+      <div class="field is-grouped">
+        <h3>Please guess a random number between 0 - 10</h3>
+        <p class="control is-expanded">
+          <input
+            class="input"
+            type="text"
+            placeholder="Enter a Random Number"
+          />
+        </p>
+        <p class="control">
+          <button>
+            Submit Guess
+          </button>
+        </p>
+      </div>
+    </section>
     <script src="scriptKL.js"></script>
   </body>
 </html>
