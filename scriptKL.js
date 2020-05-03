@@ -31,6 +31,10 @@ function onClickCompareNumbers() {
     document.getElementById('guessOutcome').innerHTML =
       'Nooooo it is NOT a match'
   }
+  if (counter < 6 && userNumber > randomNumber) {
+    document.getElementById('guessOutcome').innerHTML =
+      'Uh uh uh ... Too high. Try again.'
+  }
   if (userNumber === randomNumber) {
     console.log('Match')
     document.getElementById('guessOutcome').innerHTML =
