@@ -4,7 +4,6 @@
 // Use your imagination to add features to this basic game. Can add GUI or can make it playing online by passing to the server.
 
 // Declared and Initialized variables
-// let userGuess =
 let counter = 0
 let maxGuesses = 5
 let maxNumberRange = 10
