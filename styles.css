@@ -10,12 +10,11 @@
   overflow: hidden;
   background-size: cover;
   background: radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 54%,
-      rgba(0, 142, 241, 0.65) 100%
-    ),
-    url(qijin-xu.png) no-repeat center center scroll;
+    ellipse at center,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 54%,
+    rgba(0, 142, 241, 0.65) 100%
+  );
 }
 
 h1 {
@@ -26,6 +25,9 @@ h1 {
   /* letter-spacing: 0.03em; */
   line-height: 1;
   margin-bottom: 2rem;
+}
+h3 {
+  color: #5f6164;
 }
 #guessOutcome {
   color: #ef476f;
