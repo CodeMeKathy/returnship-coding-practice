@@ -6,7 +6,7 @@
 // Declared and Initialized variables
 let counter = 0
 let maxGuesses = 5
-let maxNumberRange = 10
+let maxNumberRange = 20
 
 // Create a function to generate a random number
 function getRandomNumber(maxNumberRange) {
@@ -45,4 +45,11 @@ function onClickCompareNumbers() {
     document.getElementById('guessOutcome').innerHTML =
       'Game Over. No more guesses!'
   }
+}
+
+function resetGame() {
+  counter = 0
+  console.log(counter)
+  document.getElementById('input').value = ''
+  document.getElementById('guessOutcome').innerHTML = ''
 }
