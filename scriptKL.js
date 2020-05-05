@@ -7,6 +7,7 @@
 let counter = 0
 let maxGuesses = 5
 let maxNumberRange = 20
+let guessCount = 5
 
 // Create a function to generate a random number
 function getRandomNumber(maxNumberRange) {
@@ -25,11 +26,16 @@ function onClickCompareNumbers() {
   console.log('randomNumber =', randomNumber)
   console.log('userNumber =', userNumber)
   counter++
+  guessCount--
+
   console.log(counter)
   if (counter < 6 && userNumber !== randomNumber) {
     console.log('counter count: ', counter)
     document.getElementById('guessOutcome').innerHTML =
       'Nooooo it is NOT a match. Try Again!'
+    document.getElementById(
+      'guessCount'
+    ).innerHTML = `😱 Only ${guessCount} Guesses Left!`
   }
   if (counter < 6 && userNumber > randomNumber) {
     document.getElementById('guessOutcome').innerHTML =
@@ -44,6 +50,7 @@ function onClickCompareNumbers() {
     console.log('No more guesses!')
     document.getElementById('guessOutcome').innerHTML =
       'Game Over. No more guesses!'
+    document.getElementById('guessCount').innerHTML = ``
   }
 }
 
