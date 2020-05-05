@@ -29,7 +29,7 @@ function onClickCompareNumbers() {
   if (counter < 6 && userNumber !== randomNumber) {
     console.log('counter count: ', counter)
     document.getElementById('guessOutcome').innerHTML =
-      'Nooooo it is NOT a match'
+      'Nooooo it is NOT a match. Try Again!'
   }
   if (counter < 6 && userNumber > randomNumber) {
     document.getElementById('guessOutcome').innerHTML =
